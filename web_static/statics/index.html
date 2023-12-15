@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> AirBnB welcome page</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../images/logo.png">
+</head>
+
+<body>
+    <header>
+        <div id="header_container">
+            <div id="header_logo"><img src="../images/logo.png"></div>
+            <div id="search_input_container">
+                <input id="input_field_contains_search" type="text" placeholder="Search for anything...">
+                <span id="icon_search" onclick="">
+                    <img src="../images/icon_search.png">
+                </span>
+            </div>
+
+            <div id="other_items">
+                <div id="Airbnb_your_home" onclick="">Airbnb your home</div>
+                <div id="language_icon">
+                    <img src="../images/icon_language.png" onclick="">
+                </div>
+                <div id="menu_and_user">
+                    <div id="menu_icon" onclick="toggleDropdown('menu_dropdown')">
+                        <menu>
+                            <img src="../images/icon_menu.png">
+                        </menu>
+                        <div id="menu_dropdown" class="dropdown-content">
+                            <a href="../statics/register.html">Sign up</a>
+                            <a href="../statics/login.html">Login</a>
+                            <div id="just_for_a_borderline"></div>
+                            <a href="#">Gift cards</a>
+                            <a href="#">Airbnb your home</a>
+                            <a href="#">Call center</a>
+                        </div>
+                    </div>
+                    <div id="user_icon" onclick="toggleDropdown('menu_dropdown')">
+                        <img src="../images/icon_user.png" alt="">
+                        <div id="user_dropdown" class="dropdown-content">
+                            <a href="../statics/register.html">Sign up</a>
+                            <a href="../statics/login.html">Login</a>
+                            <div id="just_for_a_borderline"></div>
+                            <a href="#">Gift cards</a>
+                            <a href="#">Airbnb your home</a>
+                            <a href="#">Call center</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div>
+        <div id="Design"> </div>
+        <div id="Beach"></div>
+        <div id="Surfing"></div>
+        <div id="Arctic"></div>
+        <div id="Castles"></div>
+        <div id="Golfing"></div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+<script type="text/javascript" src="../js/dropdown.js"></script>
+</html>

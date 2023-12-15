@@ -1,0 +1,54 @@
+body {
+    padding-left: 25px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    border: 1px solid grey;
+    flex-direction: column;
+    background-color: blanchedalmond;
+}
+
+#content_container {
+    background-color: darksalmon;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+#cancel_registration {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+#login {
+    justify-self:auto;
+}
+
+#input_data input,button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding-left: 9px;
+}
+
+#login_button{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white;
+    background-color: rgb(32, 80, 80);
+    cursor: pointer;
+    width: 50%;
+}
+
+#forgot_password{
+    cursor: pointer;
+    text-decoration: none;
+    font-size: small;   
+}

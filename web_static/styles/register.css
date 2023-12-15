@@ -1,0 +1,80 @@
+body {
+    padding-left: 25px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    border: 1px solid  grey;
+}
+
+#content_container {
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+#page_title {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+#return_to_homepage {
+    text-decoration: none;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+#login_or_signup {
+    align-self: center;
+}
+
+#line_divider {
+    margin-top: 10px;
+    border: 1px solid rgb(208, 205, 205);
+}
+
+#inputs_div input {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#countries_dropdown{
+    margin-bottom: 10px;
+}
+
+#countries_dropdown,
+#first,
+#last,
+#email,
+#password {
+    border: 1px solid rgb(81, 75, 75);
+    border-radius: 15px;
+    height: 30px;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+#verification_email {
+    font-size: smaller;
+    text-decoration: none;
+}
+
+#signup_button {
+    width: 50%;
+    height: 35px;
+    border-radius: 15px;
+    border: 1px solid rgb(81, 75, 75);
+    color: white;
+    background-color: rgb(240, 25, 35);
+    cursor: pointer;
+}
+
+#signup_button:hover {
+    background-color: darkred;
+}

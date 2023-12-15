@@ -1,0 +1,125 @@
+body{
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: Arial, sans-serif;
+}
+#header_container {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid rgb(213, 199, 199);;
+    padding: 20px 40px;
+
+}
+
+#header_logo img {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    
+
+}
+
+#search_input_container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#icon_search img{
+    cursor: pointer;
+    width: 20px;
+    background-color: red;
+    border-radius: 100%;
+    filter: invert(4%);
+    padding: 10px;
+    margin-left: -50px;
+}
+
+#input_field_contains_search {
+    font-size: 20px;
+    font-weight: 300;
+    flex: 1;
+    height: 60px;
+    width: 600px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid rgb(213, 199, 199);
+}
+
+#other_items{
+    max-width: 400px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#Airbnb_your_home {
+    color: rgb(72, 69, 69);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#language_icon img {
+    cursor: pointer;
+    height: auto;
+    width: 25px;
+    filter: invert(30%);
+}
+
+#menu_and_user {
+    width: fit-content;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid rgb(232, 217, 217);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+#menu_icon img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    filter: invert(50%);
+}
+
+#user_icon img {
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    filter: invert(50%);
+}
+
+.dropdown-content {
+    justify-content: space-between;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#just_for_a_borderline {
+    border: 1px solid rgb(200, 191, 191);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.show{
+    display: block;
+}

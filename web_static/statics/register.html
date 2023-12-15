@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Airbnb register page</title>
+    <link rel="stylesheet" href="../styles/register.css">
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <div id="content_container">
+        <div id="page_title">
+            <a id="return_to_homepage" href="../statics/index.html"> X </a>
+            <div id="login_or_signup"> Log in or Sign up</div>
+        </div>
+
+        <div id="line_divider"></div>
+        <div id="inputs_div">
+            <h3>Welcome to Airbnb</h3>
+
+            <select id="countries_dropdown" name="countries_dropdown">
+                <option value="" disabled selected>Select Country / Region</option>
+                <option value="country1">Country 1</option>
+                <option value="country2">Country 2</option>
+
+            </select>
+
+            <input type="text" id="first" placeholder="first name">
+            <input type="text" id="last" placeholder="last name">
+            <input type="text" id="email" placeholder="Email">
+            <input type="text" id="password" placeholder="Password">
+
+            <p id="verification_email">
+                We’ll send you an email to verify your account.
+                <a id="verification_email" href="#">Privacy Policy</a>
+            </p>
+            <button id="signup_button" onclick="submitForm()">
+                Signup
+            </button>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="../js/register.js"></script>
+
+</html>
