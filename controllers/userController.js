@@ -7,6 +7,10 @@ const createUser = async (req, res) => {
         const { email, password, last_name, first_name } = req.body;
 
         // Check if password is provided
+        if (!email) {
+            return res.status(400).json({ message: "Please enter an email" });
+        }
+
         if (!password) {
             return res.status(400).json({ message: "Please enter a password" });
         }
@@ -42,7 +46,7 @@ const createUser = async (req, res) => {
 };
 
 
-async function loginUser(req, res) {
+const loginUser = async (req, res) => {
     try {
         const { email, password } = req.body;
 
@@ -59,25 +63,21 @@ async function loginUser(req, res) {
             const token = await generateToken(find_email._id);
             req.session.token = token;
 
-            return res.status(201).json({
-                data: token,
-                message: "Logged in",
-            });
+            console.log(find_email.last_name);
+            return res.status(201).json({ data: { token, name: find_email.first_name } });
         } else {
             // Passwords don't match
-            return res.status(404).json({ message: "Incorrect email or password" });
+            return res.status(404).json({ error: "Please enter a correct password" });
         }
     } catch (err) {
         console.error("Error logging in user", err);
-        return res.status(500).json({ message: "Internal Server Error" });
+        return res.status(500).json({ error: "Internal Server Error" });
     }
-}
-
-
+};
 
 function logoutUser(req, res) {
     delete req.session.token;
     res.status(200).json({ message: "Logged out" });
 }
 
-module.exports = { createUser, loginUser, logoutUser };
+export { createUser, loginUser, logoutUser };

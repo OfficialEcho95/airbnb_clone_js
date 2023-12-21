@@ -1,11 +1,11 @@
-async function submitForm() {
+async function createUserForm() {
     const first_name = document.getElementById('first').value;
     const last_name = document.getElementById('last').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
     try {
-        const response = await fetch('http://localhost:3000/users/createUser', {
+        const response = await fetch('/users/createUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -23,7 +23,16 @@ async function submitForm() {
         if (response.ok) {
             console.log(data);
             alert(`Signup successful. Please log in.`);
-            redirect('/login');
+            // Hide the alert after 2 seconds
+            setTimeout(() => {
+                alert.close();
+            }, 2000);
+
+            // Redirect after a delay (optional)
+            setTimeout(() => {
+                redirect('/login');
+            }, 2000);
+            window.location.href = '/login.html'
         } else {
             console.error('Error creating user:', data.message);
             
@@ -41,3 +50,7 @@ async function submitForm() {
         alert("Something went wrong. Please try again.");
     }
 }
+
+document.getElementById('signup_button').addEventListener('click', async () => {
+    await createUserForm();
+});
