@@ -11,7 +11,7 @@ async function logoutUser(event) {
         });
 
         if (response.ok) {
-            delete req.session.token;
+
             console.log("Logout successful");
             alert("Logout successful");
 
