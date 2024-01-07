@@ -1,0 +1,48 @@
+/* Style for the 'card' container */
+.card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Style for the image inside the 'card' */
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+/* Style for the paragraph inside the 'card' */
+.card p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Style for the 'search results' div */
+#search_results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Style for the heading "Search Results" */
+#search_results h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Clearfix for the 'search results' div */
+#search_results::after {
+    content: '';
+    display: table;
+    clear: both;
+}

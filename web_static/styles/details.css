@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    margin: 0 auto;
+    /* padding: 0 10%; */
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+/* #details_container {
+    justify-content: space-between;
+} */
+
+#title_heading {
+    text-align: left;
+    color: #333;
+}
+
+.image {
+    height: 220px;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.image_div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+
+#address_paragraph {
+    color: #1f1818;
+    font-size: 26px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+#space_details {
+    font-size: 20px;
+    margin-top: -35px;
+    display: flex;
+    flex-direction: row;
+    max-width: 60%;
+    padding-bottom: 30px;
+}
+
+#space_details>* {
+    margin-right: 10px;
+}
+
+#space_details>*:last-child {
+    margin-right: 0;
+}
+
+#ratings_reviews_summary {
+    margin-bottom: 20px;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(172, 168, 168);
+    padding: 0 25px;
+    border-radius: 14px;
+    width: 50%;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#ratings_reviews_summary>* {
+    margin-right: 50px;
+}
+
+#ratings_reviews_summary>*:last-child {
+    margin-right: 0;
+}
+
+#guests_favorite {
+    max-width: 10%;
+}
+
+#a_little_summary {
+    max-width: 70%;
+}
+
+.icon_class {
+    padding-right: 30px;
+    height: 30px;
+    width: auto;
+}
+
+.feature-container {
+    font-size: 20px;
+    width: 46%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+
+.feature-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.short-description {
+    font-size: 15px;
+}
+
+#cancel {
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(193, 187, 187);
+}
+
+#description_paragraph {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(193, 187, 187);
+}
+
+#where_you_sleep {
+    font-size: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(193, 187, 187);
+}
+
+#bedroom_features {
+    font-size: 20px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 180px;
+    border: 1px solid rgb(193, 187, 187);
+    border-radius: 15px;
+    justify-content: space-between;
+    height: 90px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#icon {
+    width: 20px;
+}
+
+#amenities_available {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 70%;
+}
+
+#offers {
+    font-size: 20px;
+}
+#amenities_align{
+    display: flex;
+    flex-direction: column;
+}
+#showMoreButton {
+    font-size: 22px;
+    max-width: fit-content;
+    background-color: white;
+    border: 1px solid rgb(193, 187, 187);
+    border-radius: 13px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+
+/* special case */
+#lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+  }
+  
+  #lightbox-image {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  

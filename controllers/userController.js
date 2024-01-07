@@ -40,7 +40,7 @@ const createUser = async (req, res) => {
             // Handle Mongoose validation error
             return res.status(400).json({ message: "Validation error", errors: err.errors });
         }
-        
+
         return res.status(500).json({ message: "Internal Server Error" });
     }
 };
@@ -77,7 +77,10 @@ const loginUser = async (req, res) => {
 
 function logoutUser(req, res) {
     delete req.session.token;
-    res.status(200).json({ message: "Logged out" });
+
+    // Set no-store to prevent caching
+    res.setHeader('Cache-Control', 'no-store');
+    return res.status(200).json({ message: "Logged out" });
 }
 
 export { createUser, loginUser, logoutUser };

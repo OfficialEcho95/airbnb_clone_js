@@ -2,7 +2,20 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
 const amenitySchema = new Schema ({
-    name: String,
+    name: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    description: {
+        type: String,
+        required: true,
+    },
+    icon: {
+        type: String,
+        required: true,
+    },
+
 }, {timestamps: true});
 
 module.exports = mongoose.model('Amenity', amenitySchema);

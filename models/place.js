@@ -49,6 +49,17 @@ const placeSchema = new Schema({
         type: Number,
         default: 0.0
     },
+    image: {
+        type: [String],
+        required: true
+    },
+    ratings: {
+        type: Number,
+        default: 0
+    },
+    location: {
+        type: String
+    },
     // amenities: [{
     //   type: Schema.Types.ObjectId,
     //   ref: 'Amenity'

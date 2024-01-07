@@ -3,7 +3,7 @@ async function logoutUser(event) {
     event.preventDefault();
 
     try {
-        const response = await fetch('/logoutUser', {
+        const response = await fetch('/users/logoutUser', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -11,9 +11,11 @@ async function logoutUser(event) {
         });
 
         if (response.ok) {
-
             console.log("Logout successful");
             alert("Logout successful");
+
+            // Replace the current history entry with the index page
+            window.history.replaceState({}, document.title, '/index.html');
 
             // Redirect to the index page
             window.location.href = '/index.html';
@@ -29,7 +31,8 @@ async function logoutUser(event) {
 }
 
 const logoutButton = document.getElementById('logout_button');
-console.log(logoutButton);
 if (logoutButton) {
-    logoutButton.addEventListener('click', logoutUser);
+    logoutButton.addEventListener('click', (event) => {
+        logoutUser(event);
+    });
 }

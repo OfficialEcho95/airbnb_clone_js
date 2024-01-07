@@ -1,7 +1,10 @@
 const Place = require('../models/place');
 const User = require('../models/user');
 const City = require('../models/city');
-const State = require('../models/state')
+const State = require('../models/state');
+const express = require('express');
+const router = express.Route
+
 
 async function createPlace(req, res) {
     try {
@@ -16,10 +19,15 @@ async function createPlace(req, res) {
             longitude,
             user_id,
             state_name,
-            city_name
+            city_name,
+            images,
+            ratings,
+            location
         } = req.body;
 
-        
+        const sanitizedNumberBathrooms = isNaN(number_bathrooms) ? 0 : number_bathrooms;
+        const sanitizedNumberRooms = isNaN(number_rooms) ? 0 : number_rooms;
+
         // Find the user by ID
         const user = await User.findById(user_id);
 
@@ -48,12 +56,15 @@ async function createPlace(req, res) {
         const place = await Place.create({
             name,
             description,
-            number_bathrooms,
-            number_rooms,
+            number_bathrooms: sanitizedNumberBathrooms,
+            number_rooms: sanitizedNumberRooms,
             latitude,
             longitude,
             price_by_night,
             max_guest,
+            images,
+            ratings,
+            location,
             user: user._id,
             city: city._id,
             state: state._id
@@ -111,25 +122,50 @@ async function updatePlace(req, res) {
     }
 }
 
-
 async function getPlace(req, res) {
     try {
-        const { name } = req.params;
+        const { search } = req.query;
 
-        if (!name) {
-            return res.status(400).json({ message: "City name is required" });
+        if (!search) {
+            return res.status(400).json({ message: "Search term is required" });
         }
 
-        const place = await Place.findOne({ name });
+        //search place in the db
+        const filteredPlaces = await Place.find({
+            $or: [
+                { name: { $regex: new RegExp(search, 'i') } },
+                { description: { $regex: new RegExp(search, 'i') } }
+            ]
+        });
 
-        if (!place) {
-            return res.status(404).json({ message: `Place with name ${name} not found` });
+        if (filteredPlaces.length === 0) {
+            return res.status(404).json({ message: `No places found for the search term ${search}` });
         }
 
-        return res.status(200).json({ place });
+        return res.status(200).json({ places: filteredPlaces });
+
     } catch (error) {
         console.error(error);
         return res.status(500).json({ message: "Internal Server Error" });
+    }
+}
+
+async function getPlaceById(req, res) {
+    try {
+        const placeId = req.params.id;
+
+        // Fetch the details of the place using the placeId
+        const placeDetails = await Place.findById(placeId);
+
+        if (!placeDetails) {
+            return res.status(404).json({ message: 'Place not found' });
+        }
+        // Send the place details as JSON
+        res.status(200).json({ place: placeDetails });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
     }
 }
 
@@ -172,4 +208,4 @@ async function deletePlace(req, res) {
 }
 
 
-module.exports = { createPlace, updatePlace, getPlace, getAllPlace, deletePlace };
+module.exports = { createPlace, updatePlace, getPlace, getPlaceById, getAllPlace, deletePlace };

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" href="./styles/details.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Details</title>
+    <link rel="stylesheet" href="../styles/index_header.css">
+
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <script>
+        // Load the header dynamically
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('./index_header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("header-placeholder").innerHTML = html;
+                });
+        });
+    </script>
+
+    <div id="details_container">
+
+        <!-- Details will be displayed here dynamically -->
+
+        <div id="space_details">
+            <p id="guests"></p>
+            <p id="bedrooms"></p>
+            <p id="bathrooms"></p>
+        </div>
+
+        <div id="ratings_reviews_summary">
+            <p id="guests_favorite">Guests favorite</p>
+            <p id="a_little_summary">One of the most loved homes on Airbnb, according to guests</p>
+            <p id="ratings"></p>
+            <p id="reviews"></p>
+        </div>
+
+        <div id="accommodation_features">
+            <div class="feature-container" id="workspace">
+                <img class="icon_class" src="./images/working-on-office-icon.png" alt="">
+                <div class="feature-details">
+                    <div class="feature-title">Dedicated Workspace</div>
+                    <div class="short-description">A common area with wifi that's well-suited for working</div>
+                </div>
+            </div>
+
+            <div class="feature-container" id="check_in">
+                <img class="icon_class" src="./images/glass-door-icon.png" alt="">
+                <div class="feature-details">
+                    <div class="feature-title">Self Check-in</div>
+                    <div class="short-description">Check yourself in with the lockbox</div>
+                </div>
+            </div>
+
+            <div class="feature-container" id="cancel">
+                <img class="icon_class" src="./images/calendar-checkmark-line-icon.png" alt="">
+                <div class="feature-details">
+                    <div class="feature-title">Free Cancellation</div>
+                    <div class="short-description">Free cancellation before Jan 31</div>
+                </div>
+            </div>
+
+            <div class="feature-container" id="description_paragraph">
+                <!-- description will be dynamically added here -->
+            </div>
+        </div>
+
+        <div id="where_you_sleep">
+            <div id="sleep">
+                <h3>
+                    Where you'll sleep
+                </h3>
+            </div>
+
+            <div id="bedroom_features">
+                <img id="icon" src="./images/icons8-bed-64.png">
+                <span id="name_space">
+                    Bedroom 1
+                    <!-- name space will be added here -->
+                </span>
+                <span id="name_space_feature">
+                    1 double bed
+                    <!-- feature will be dynamically added -->
+                </span>
+            </div>
+
+        </div>
+
+        <div id="amenities_zone">
+            <div id="offers">
+                <h3>
+                    What this place has to offer?
+                </h3>
+            </div>
+
+            <div id="amenities_align">
+                <div id="amenities_available">
+                    <!-- will be added dynamically -->
+                </div>
+                <div id="some_space">
+                
+                </div>
+            </div>
+        </div>
+
+        <!-- toggle the image open and close -->
+        <div id="lightbox-modal">
+            <span class="close-button"  id="close-button">&times;</span>
+            <img id="lightbox-image" src="" alt="Enlarged Image">
+          </div>
+          
+
+    </div>
+    <footer>
+
+    </footer>
+
+    <script type="text/javascript" src="./js/details.js" defer></script>
+    <script type="text/javascript" src="./js/search.js"></script>
+</body>
+
+</html>

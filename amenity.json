@@ -1,0 +1,62 @@
+[
+    {
+      "name": "Wifi",
+      "description": "Free wifi for guests",
+      "icon": "https://icons8.com/icon/172/wi-fi"
+    },
+    {
+      "name": "TV",
+      "description": "50' TV available",
+      "icon": "https://icons8.com/icon/540/tv"
+    },
+    {
+      "name": "Kitchen",
+      "description": "Comfortable and furnished kitchen",
+      "icon": "https://icons8.com/icon/a29wifxHKLyH/kitchen"
+    },
+    {
+      "name": "Swimming Pool",
+      "description": "Outdoor pool for relaxation",
+      "icon": "https://icons8.com/icon/h5vIbHYsdMyt/summer"
+    },
+    {
+      "name": "Air Conditioning",
+      "description": "Climate control for comfort",
+      "icon": "https://icons8.com/icon/tdhXeU-Nek4p/air-conditioner"
+    },
+    {
+      "name": "Parking",
+      "description": "On-site parking facilities",
+      "icon": "https://icons8.com/icon/10726/parking"
+    },
+    {
+      "name": "Gym",
+      "description": "Fitness center with modern equipment",
+      "icon": "https://icons8.com/icon/1784/dumbbell"
+    },
+    {
+      "name": "Pet Friendly",
+      "description": "Pets are welcome",
+      "icon": "https://icons8.com/icon/YFxNasc9IQtI/pet"
+    },
+    {
+      "name": "Ocean View",
+      "description": "Scenic view of the ocean",
+      "icon": "https://icons8.com/icon/fZzbg8yB_mvZ/wave-lines"
+    },
+    {
+      "name": "Free Breakfast",
+      "description": "Complimentary breakfast included",
+      "icon": "https://icons8.com/icon/Kk6FazFwbvkv/breakfast"
+    },
+    {
+      "name": "Wheelchair Accessible",
+      "description": "Facilities accessible to people with disabilities",
+      "icon": "https://icons8.com/icon/nZpEEANU9xUj/wheelchair-ramp"
+    },
+    {
+      "name": "Fireplace",
+      "description": "Cozy fireplace for warmth",
+      "icon": "https://icons8.com/icon/66717/fireplace"
+    }
+  ]

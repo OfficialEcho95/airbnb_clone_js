@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>search results page</title>
+    <link rel="stylesheet" href="../styles/dashboard.css" />
+    <link rel="stylesheet" href="../styles/index_header.css" />
+    <link rel="stylesheet" href="../images/logo.png">
+
+</head>
+
+<body>
+    <header>
+        <div id="header_container">
+            <div id="header_logo"><img src="../images/logo.png"></div>
+            <div id="search_input_container">
+                <input id="input_field_contains_search" type="text" placeholder="Search for anything...">
+                <span id="icon_search">
+                    <img src="../images/icon_search.png">
+                </span>
+            </div>
+
+            <div id="other_items">
+                <div id="dashboard_title"></div>
+                <div id="language_icon">
+                    <img src="../images/icon_language.png">
+                </div>
+                <div id="menu_and_user" onclick="toggleDropdown('menu_dropdown')">
+                    <div id="menu_icon">
+                        <menu>
+                            <img src="../images/icon_menu.png">
+                        </menu>
+                        <div id="menu_dropdown" class="dropdown-content">
+                            <a href="#">Messages</a>
+                            <a href="#">Notifications</a>
+                            <a href="#">Trips</a>
+                            <a href="#">Wishlists</a>
+                            <a href="">Airbnb your home</a>
+                            <a href="">Account</a>
+                            <a href="">Gift card</a>
+                            <a href="">Help center</a>
+                            <a id="logout_button" href="#">Log out</a>
+                        </div>
+                    </div>
+                    <div id="user_icon">
+                        <img src="../images/icon_user.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="results">
+        <!-- search results will display here -->
+    </div>
+
+    <footer>
+
+    </footer>
+    <script type="text/javascript" src="./js/search_result.js"></script>
+    <script type="text/javascript" src="./js/search.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+</body>
+
+</html>
