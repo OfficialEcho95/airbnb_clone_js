@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="./styles/createReservation.css">
+
+</head>
+
+<body>
+    <div id="main_container">
+        <div id="side_one">
+            <div id="back_icon_and_heading">
+                <img id="back_icon" src="./images/icons8-back-30.png">
+                <p id="confirm_and_pay">
+                    Confirm and Pay
+                </p>
+            </div>
+
+            <p id="your_trip"> Your trip</p>
+
+            <div class="dates_edit" id="dates_pick">
+                <div id="dates_and_display_date">
+                    <p id="dates">Dates</p>
+                    <p id="display_date"></p>
+                </div>
+                <p class="edit" id="edit">edit</p>
+            </div>
+
+            <div class="dates_edit" id="guests_pick">
+                <div id="guests_and_display_guests">
+                    <p id="guests">Guests</p>
+                    <p id="display_guests"></p>
+                </div>
+                <p class="edit" id="guest_edit">edit</p>
+            </div>
+
+            <!-- popup for guests selection -->
+            <div id="guestModal">
+                <div id="modalContent">
+                    <p>Select the number of guests:</p>
+                    <select id="modalSelect"></select>
+                    <br>
+                    <button id="closeGuestButton">Close</button>
+                </div>
+            </div>
+
+            <div id="required_for_your_trip">
+                <div id="required_for_your_trip_header"> Required for your trip</div>
+                <div id="phone_number_header">
+                    <div id="phone_number_container">
+                        <div id="phone_number">Phone number</div>
+                        <button id="add_phone_number_button">Add</button>
+                    </div>
+                    <p id="phone_number_paragraph">Add and confirm your phone number to get trip updates.</p>
+                </div>
+            </div>
+
+            <!-- Modal (pop up to add phone number ) -->
+            <div id="phone_modal" class="modal">
+                <div class="modal-content">
+                    <div id="modal_top_div">
+                        <span class="close">&times;</span>
+                        <p id="add_phone_number">Add phone number</p>
+                    </div>
+                    <form id="phone_form">
+                        <label for="phone_input"></label>
+                        <input type="tel" id="phone_input" placeholder="Enter phone number" required>
+                    </form>
+                    <button type="button" id="continue_button">Continue</button>
+                </div>
+            </div>
+
+            <button id="confirm_pay_button">Confirm and Pay</button>
+
+        </div>
+
+
+        <div id="side_two">
+            <div id="main_container_two">
+                <div id="top_side">
+                    <img id="airbnb_preview" alt="">
+                    <div id="side_of_image">
+                        <p id="entire_villa"> Entire villa</p>
+                        <p id="airbnb_name"></p>
+                        <p id="rating"></p>
+                    </div>
+                </div>
+                <div class="space_between" id="middle_side">
+                    <p id="price_details_header">Price details</p>
+                    <div class="display_row">
+                        <p id="price_by_night_times_nDays"></p>
+                        <p id="total_price_by_night_times_nDays"></p>
+                    </div>
+                    <div class="display_row">
+                        <p id="airbnb_service_fee">airbnb service fee</p>
+                        <p id="service_fee"></p>
+                    </div>
+                </div>
+
+                <div class="space_between" id="bottom_side">
+                    <p id="total">Total (USD)</p>
+                    <p id="amount_figure"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script type="text/javascript" src="./js/createReservationPage.js"></script>
+
+</html>

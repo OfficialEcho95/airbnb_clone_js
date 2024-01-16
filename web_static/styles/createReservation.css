@@ -1,0 +1,273 @@
+#main_container {
+    padding: 0 200px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#side_one {
+    /* align-items: start; */
+    width: 60%;
+}
+
+#back_icon,
+img {
+    height: 19px;
+}
+
+#back_icon_and_heading {
+    align-items: baseline;
+    /* padding-left: -100px; */
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+
+}
+
+#confirm_and_pay {
+    padding-left: 30px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#your_trip {
+    font-weight: 600;
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+.dates_edit {
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.edit {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#required_for_your_trip {
+    border-top: 1px solid rgb(176, 171, 171);
+}
+
+#required_for_your_trip_header {
+    margin: 40px 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#phone_number {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#phone_number_container {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+#add_phone_number_button {
+    padding: 8px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#phone_number_paragraph {
+    margin-top: -3px;
+}
+
+/* phone modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    border: 1px solid rgb(176, 171, 171);
+    align-content: start;
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 20px;
+    height: 50%;
+}
+
+/* Close button style */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#add_phone_number{
+    font-weight: bold;
+    padding-left: 25%;
+}
+
+#modal_top_div {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 80px;
+}
+
+#phone_input {
+    margin-bottom: 40px;
+    padding-left: 30px;
+    height: 50px;
+    width: 80%;
+    border-radius: 15px;
+    border: 1px solid rgb(176, 171, 171);
+    font-size: 20px;
+}
+
+#continue_button {
+    width: 100px;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* phone modal close */
+
+#confirm_pay_button {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 15px;
+    border-color: transparent;
+    box-shadow: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#guests_and_display_guests {
+    display: flex;
+    flex-direction: column;
+}
+
+#display_guests {
+    margin-top: -8px;
+}
+
+#guestModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+#modalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 25px;
+}
+
+#bottom_side {
+    justify-content: space-between;
+}
+
+#modalSelect {
+    padding: 10px;
+    font-size: 17px;
+}
+
+#closeGuestButton {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+}
+
+
+/* side two */
+#side_two {
+    width: 35%;
+}
+
+#main_container_two {
+    border: 1px solid rgb(176, 171, 171);
+    border-radius: 15px;
+    padding: 0 20px;
+    height: 380px;
+    justify-content: space-between;
+}
+
+#top_side {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgb(176, 171, 171);
+}
+
+#price_details_header {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.display_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+#airbnb_preview,
+img {
+    height: 120px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#bottom_side {
+    border-top: 1px solid rgb(176, 171, 171);
+    display: flex;
+    flex-direction: row;
+}
+
+#total {
+    font-weight: bold;
+}

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const app = express();
 
-const { createUser, loginUser, logoutUser } = require('../controllers/userController');
+const { createUser, loginUser, logoutUser, updateUser, getUserDetails } = require('../controllers/userController');
 const { updatePlace, createPlace, getPlaceById, getPlace, getAllPlace, deletePlace } = require('../controllers/placeController');
 const { createCity, getACity, getCity, deleteCity } = require('../controllers/cityController');
 const { createState } = require('../controllers/stateController');
@@ -26,10 +26,17 @@ router.get('/logoutUser', logoutUser);
 // app.use((req, res, next) => authenticateToken(req, res, next, onTokenExpired));
 
 router.get('/dashboard', authenticateToken, (req, res) => {
-    console.log('Token expired. Please sign in again.');
-    res.redirect('/login');
+
+    // const { userId, name } = req.user;
+
+    // console.log(`User ${name} with ID ${userId} accessed the dashboard.`);
+
+    // Send a response indicating success
+    res.status(200).json({ message: 'Dashboard accessed successfully.' });
 });
 
+router.put('/updateUser', updateUser);
+router.get('/userDetails', getUserDetails);
 router.get('/details/:id', getPlaceById);
 router.post('/updatePlace', updatePlace);
 router.post('/createPlace', createPlace);

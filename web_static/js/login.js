@@ -90,4 +90,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (loginButton) {
         loginButton.addEventListener('click', submitForm);
     }
+
+     // Listen for 'keydown' event on the document
+     document.addEventListener('keydown', (event) => {
+        // Check if the pressed key is the 'Enter' key
+        if (event.key === 'Enter') {
+            // Simulate a click on the login button
+            if (loginButton) {
+                loginButton.click();
+            }
+        }
+    });
 });
+

@@ -62,6 +62,8 @@ const details = async () => {
                 closeButton.addEventListener('click', closeLightbox);
             }
 
+
+            //to get the address of the airbnb
             const addressParagraph = document.createElement('p');
             addressParagraph.id = 'address_paragraph';
             addressParagraph.textContent = data.place.location;
@@ -206,3 +208,18 @@ document.addEventListener('DOMContentLoaded', () => {
     details();
     fetchAmenities();
 });
+
+
+
+//reserve button functionality
+const reserve_button = document.getElementById('reserve_button');
+
+if (reserve_button) {
+    const searchParam = new URLSearchParams(window.location.search);
+    const id = searchParam.get('id');
+    reserve_button.addEventListener('click', async function (event) {
+        event.preventDefault();
+        const url = `/createReservationPage.html?placeid=${encodeURIComponent(id)}`;
+        window.open(url, '_blank');
+    });
+}

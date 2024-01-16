@@ -1,0 +1,13 @@
+#placeName {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#totalAmount, #daysSpent {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#placeName {
+    cursor: pointer;
+}

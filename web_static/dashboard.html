@@ -8,12 +8,52 @@
     <link rel="stylesheet" href="../images/logo.png">
     <script type="text/javascript" src="./js/dashboard.js"></script>
     <script type="text/javascript" src="./js/login.js"></script>
-    
+
 </head>
 
 <body>
-    <div id="dashboardHeader"> 
-    </div>
+    <header>
+        <div id="header_container">
+            <div id="header_logo"><img src="../images/logo.png"></div>
+            <div id="search_input_container">
+                <input id="input_field_contains_search" type="text" placeholder="Search for anything...">
+                <span id="icon_search">
+                    <img src="../images/icon_search.png">
+                </span>
+            </div>
+
+            <div id="other_items">
+                <div id="dashboard_title"></div>
+                <div id="language_icon">
+                    <img src="../images/icon_language.png">
+                </div>
+                <div id="menu_and_user" onclick="toggleDropdown('menu_dropdown')">
+                    <div id="menu_icon">
+                        <menu>
+                            <img src="../images/icon_menu.png">
+                        </menu>
+                        <div id="menu_dropdown" class="dropdown-content">
+                            <a href="#">Messages</a>
+                            <a href="#">Notifications</a>
+                            <a id="trips_button" href="#">Trips</a>
+                            <a href="#">Wishlists</a>
+                            <a href="">Airbnb your home</a>
+                            <a href="">Account</a>
+                            <a href="">Gift card</a>
+                            <a href="">Help center</a>
+                            <a id="logout_button" href="#">Log out</a>
+                        </div>
+                    </div>
+                    <div id="user_icon">
+                        <img src="../images/icon_user.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </header>
 
 
     <div id="indexContentContainer">
@@ -43,4 +83,5 @@
 <script type="text/javascript" src="./js/logout.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
 <script type="text/javascript" src="./js/search.js"></script>
+
 </html>

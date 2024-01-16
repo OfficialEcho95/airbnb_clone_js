@@ -3,6 +3,8 @@ async function createUserForm() {
     const last_name = document.getElementById('last').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+    const country = document.getElementById('country').value;
+    const state = document.getElementById('state').value;
 
     try {
         const response = await fetch('/users/createUser', {
@@ -15,6 +17,8 @@ async function createUserForm() {
                 last_name,
                 email,
                 password,
+                country,
+                state
             }),
         });
 
@@ -22,7 +26,8 @@ async function createUserForm() {
 
         if (response.ok) {
             console.log(data);
-            alert(`Signup successful. Please log in.`);
+            
+            alert(data.message)
             // Hide the alert after 2 seconds
             setTimeout(() => {
                 alert.close();

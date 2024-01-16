@@ -9,6 +9,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+//functionality to the trips anchor button
+document.addEventListener('DOMContentLoaded', () => {
+    const tripsButton = document.getElementById('trips_button');
+
+    if (tripsButton) {
+        tripsButton.addEventListener('click', async function () {
+            try {
+                const response = await fetch('/reservations/allTrips');
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const params = new URLSearchParams(window.location.search);
+                const userName = params.get('name');
+                
+                window.location.href = `/userTrips.html?allusertrips=${decodeURIComponent(userName)}`;
+
+            } catch (error) {
+                console.error('Error fetching trips:', error.message);
+            }
+        });
+    }
+});
+
+
 function toggleDropdown(menu_dropdown) {
     const dropdown = document.getElementById(menu_dropdown);
     dropdown.classList.toggle('show');

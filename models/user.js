@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Notification = require('./notification.js');
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
@@ -11,6 +12,11 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  role: {
+    type: String,
+    enum: ['user', 'admin'],
+    default: 'user'
+  },
   last_name: {
     type: String,
     required: [true, "Please enter your lastname"]
@@ -18,7 +24,14 @@ const userSchema = new Schema({
   first_name: {
     type: String,
     required: [true, "Please enter your firstname"],
-  }
+  },
+  reservations: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Reservation',
+    },
+  ],
+  notifications: [Notification.schema],
 }, {
   timestamps: true
 });

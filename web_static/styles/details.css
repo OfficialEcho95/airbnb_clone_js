@@ -7,6 +7,18 @@ body {
     margin-right: 10%;
 }
 
+#ratings_reviews_summary_reserve_button {
+    display: flex;
+    flex-direction: row;
+}
+
+#reserve_button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
 
 /* #details_container {
     justify-content: space-between;
@@ -159,10 +171,12 @@ body {
 #offers {
     font-size: 20px;
 }
-#amenities_align{
+
+#amenities_align {
     display: flex;
     flex-direction: column;
 }
+
 #showMoreButton {
     font-size: 22px;
     max-width: fit-content;
@@ -184,21 +198,22 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     overflow: auto;
-  }
-  
-  #lightbox-image {
+}
+
+#lightbox-image {
     display: block;
     margin: auto;
     max-width: 80%;
     max-height: 80%;
-  }
-  
-  .close-button {
+}
+
+.close-button {
     position: absolute;
     top: 15px;
     right: 15px;
     font-size: 30px;
     color: white;
     cursor: pointer;
-  }
-  
+}
+
+

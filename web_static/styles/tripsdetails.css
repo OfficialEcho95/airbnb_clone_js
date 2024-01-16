@@ -1,0 +1,19 @@
+body {
+    padding: 0 20%;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+
+#reservationDetails {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    height: 300px;
+    border-radius: 17px;
+}
+
+p {
+    font-size: 24px;
+}
